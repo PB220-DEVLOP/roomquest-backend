@@ -24,7 +24,7 @@ app.use(
                 scriptSrcElem: ["'self'", "blob:"],
                 workerSrc: ["'self'", "blob:"],
                 childSrc: ["'self'", "blob:"],
-                connectSrc: ["'self'", process.env.FRONTEND_URL || 'http://localhost:5173'],
+                connectSrc: ["'self'", process.env.FRONTEND_URL || 'https://roomquest-frountend-gvcl.vercel.app/' || 'http://localhost:5173' ],
                 imgSrc: ["'self'", "data:"],
                 styleSrc: ["'self'", "'unsafe-inline'"],
                 objectSrc: ["'none'"],
@@ -37,7 +37,7 @@ app.use(
 
 // Other middlewares
 app.use(cors({
-    origin: [process.env.FRONTEND_URL, 'http://localhost:5173'],
+    origin: [process.env.FRONTEND_URL, 'https://roomquest-frountend-gvcl.vercel.app/' || 'http://localhost:5173'],
     methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE'],
     credentials: true,
 }));
